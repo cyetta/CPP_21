@@ -1,0 +1,6 @@
+en.subject*.pdf
+*.o
+*.d
+a.out
+test*
+zombie
