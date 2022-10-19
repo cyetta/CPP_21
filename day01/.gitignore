@@ -1,7 +1,13 @@
-en.subject*.pdf
+.DS_Store
+.gitignore
+.vscode
 *.o
 *.d
 a.out
 test*
+en.subject*.pdf
 zombie
-zombiehorde
+zombie-horde
+brain
+violence
+sedd
