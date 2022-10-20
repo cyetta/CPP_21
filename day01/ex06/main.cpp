@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyetta <cyetta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 16:24:33 by cyetta            #+#    #+#             */
-/*   Updated: 2022/10/19 18:02:31 by cyetta           ###   ########.fr       */
+/*   Created: 2022/10/19 19:37:13 by cyetta            #+#    #+#             */
+/*   Updated: 2022/10/20 16:56:38 by cyetta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "HumanB.hpp"
+#include "Harl.hpp"
 
-HumanB::HumanB(const std::string &name)
+int	main(int argc, char **argv)
 {
-	this->name = name;
-	this->weapon = NULL;
-}
 
-HumanB::~HumanB()
-{
-}
-
-
-void	HumanB::attack()
-{
-	using std::cout; using std::endl;
-
-	if (weapon)
-		cout<<name << " attacks with their " << weapon->getType() <<endl;
+	if (argc == 2)
+	{
+		Harl	harl;
+		harl.complain(argv[1]);
+		return 0;
+	}
 	else
-		cout<<name << " have not weapon. He is panic run out." <<endl;
-}
-
-void	HumanB::setWeapon(Weapon &weapon)
-{
-	this->weapon = &weapon;
+		std::cout << "Usage: ./harl <Complain>\n\
+Where <Complain> is: \"DEBUG\", \"INFO\", \"WARNING\", \"ERROR\" \
+or \"Something expression\"" << std::endl;
+	return 1;
 }
