@@ -1,5 +1,5 @@
-NAME	= fixed
-SRCS	= main.cpp Fixed.cpp
+NAME	= bsp
+SRCS	= main.cpp Fixed.cpp Point.cpp bsp.cpp
 
 OBJS	=	${SRCS:%.cpp=%.o}
 
